@@ -30,9 +30,8 @@ public class Pedido {
     @JoinColumn(name = "fornecedor_id")
     private Fornecedor fornecedor;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "pedido_id")
-    private Set<Produto> produtos;
+    @OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL)
+    private Set<ProdutoPedido> produtos;
 
     @DateTimeFormat(pattern="yyy-MM-dd-HH.mm.ss")
     @Column(name = "data_de_inclusao")
@@ -74,11 +73,11 @@ public class Pedido {
         this.fornecedor = fornecedor;
     }
 
-    public Set<Produto> getProdutos() {
+    public Set<ProdutoPedido> getProdutos() {
         return produtos;
     }
 
-    public void setProdutos(Set<Produto> produtos) {
+    public void setProdutos(Set<ProdutoPedido> produtos) {
         this.produtos = produtos;
     }
 
@@ -101,7 +100,7 @@ public class Pedido {
     public Pedido() {
     }
 
-    public Pedido(int codigo, String nome, Cliente cliente, Fornecedor fornecedor, Set<Produto> produtos,
+    public Pedido(int codigo, String nome, Cliente cliente, Fornecedor fornecedor, Set<ProdutoPedido> produtos,
             Date dataDeInclusão, Date dataDeAlteração) {
         this.codigo = codigo;
         this.nome = nome;

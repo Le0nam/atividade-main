@@ -1,9 +1,13 @@
 package com.atividade.atividade.model;
 
+import java.util.Set;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 
 @Entity
 public class Produto {
@@ -19,9 +23,6 @@ public class Produto {
         return codigo;
     }
 
-    public void setCodigo(Long id) {
-        this.codigo = id;
-    }
 
     public String getNome() {
         return nome;
@@ -39,14 +40,9 @@ public class Produto {
         this.preco = preco;
     }
 
-    public Produto(){
 
+    public Produto() {
     }
 
-    public Produto(Long id, String nome, Double preco) {
-        this.codigo = id;
-        this.nome = nome;
-        this.preco = preco;
-    }
 
 }

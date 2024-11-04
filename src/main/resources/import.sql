@@ -20,13 +20,16 @@ INSERT INTO pedido (codigo, nome, cliente_id, fornecedor_id, data_de_inclusao, d
 INSERT INTO pedido (codigo, nome, cliente_id, fornecedor_id, data_de_inclusao, data_de_alteracao) VALUES (6, 'Pedido F', 5, 2, TIMESTAMP '2024-11-02 11:20:00', NULL);
 
 -- Inserindo produtos e associando com pedidos
-INSERT INTO produto (codigo, pedido_id, nome, preco) VALUES (3, 2, 'Caneta Azul', 1.50);
-INSERT INTO produto (codigo, pedido_id, nome, preco) VALUES (4, 2, 'Lápis Preto', 0.75);
-INSERT INTO produto (codigo, pedido_id, nome, preco) VALUES (5, 3, 'Caderno', 10.00);
-INSERT INTO produto (codigo, pedido_id, nome, preco) VALUES (6, 3, 'Mochila', 50.00);
-INSERT INTO produto (codigo, pedido_id, nome, preco) VALUES (7, 4, 'Calculadora', 25.00);
-INSERT INTO produto (codigo, pedido_id, nome, preco) VALUES (8, 4, 'Capa de Notebook', 40.00);
-INSERT INTO produto (codigo, pedido_id, nome, preco) VALUES (9, 5, 'Apontador', 2.50);
-INSERT INTO produto (codigo, pedido_id, nome, preco) VALUES (10, 5, 'Garrafa Térmica', 20.00);
-INSERT INTO produto (codigo, pedido_id, nome, preco) VALUES (11, 6, 'Copo Térmico', 15.00);
-INSERT INTO produto (codigo, pedido_id, nome, preco) VALUES (12, 6, 'Agenda', 8.00);
+INSERT INTO produto (codigo, nome, preco) VALUES (3, 'Caneta Azul', 1.50);
+INSERT INTO produto (codigo, nome, preco) VALUES (4, 'Lápis Preto', 0.75);
+INSERT INTO produto (codigo, nome, preco) VALUES (5, 'Caderno', 10.00);
+INSERT INTO produto (codigo, nome, preco) VALUES (6, 'Mochila', 50.00);
+INSERT INTO produto (codigo, nome, preco) VALUES (7, 'Calculadora', 25.00);
+INSERT INTO produto (codigo, nome, preco) VALUES (8, 'Capa de Notebook', 40.00);
+INSERT INTO produto (codigo, nome, preco) VALUES (9, 'Apontador', 2.50);
+INSERT INTO produto (codigo, nome, preco) VALUES (10, 'Garrafa Térmica', 20.00);
+INSERT INTO produto (codigo, nome, preco) VALUES (11, 'Copo Térmico', 15.00);
+INSERT INTO produto (codigo, nome, preco) VALUES (12, 'Agenda', 8.00);
+
+
+INSERT INTO produto_pedido (id, pedido_id, produto_id) VALUES (3, 3, 3);
