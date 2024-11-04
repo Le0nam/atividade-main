@@ -13,7 +13,7 @@ INSERT INTO fornecedor (razao_social, nome_fantasia, CNPJ, email, telefone) VALU
 INSERT INTO fornecedor (razao_social, nome_fantasia, CNPJ, email, telefone) VALUES ('Farmácia Viva', 'FarmViva', '99.000.111/0001-55', 'contato@farmviva.com', '(61) 96789-0123');
 
 -- Inserindo pedidos
-INSERT INTO pedido (codigo, nome, cliente_id, fornecedor_id, data_de_inclusao, data_de_alteracao) VALUES (2, 'Pedido B', 2, 3, TIMESTAMP '2024-10-29 10:00:00', NULL);
+INSERT INTO pedido (codigo, nome, cliente_id, fornecedor_id, data_de_inclusao, data_de_alteracao) VALUES (1, 'Pedido B', 2, 3, TIMESTAMP '2024-10-29 10:00:00', NULL);
 INSERT INTO pedido (codigo, nome, cliente_id, fornecedor_id, data_de_inclusao, data_de_alteracao) VALUES (3, 'Pedido C', 3, 4, TIMESTAMP '2024-10-30 12:15:00', NULL);
 INSERT INTO pedido (codigo, nome, cliente_id, fornecedor_id, data_de_inclusao, data_de_alteracao) VALUES (4, 'Pedido D', 1, 1, TIMESTAMP '2024-10-31 14:30:00', NULL);
 INSERT INTO pedido (codigo, nome, cliente_id, fornecedor_id, data_de_inclusao, data_de_alteracao) VALUES (5, 'Pedido E', 4, 5, TIMESTAMP '2024-11-01 09:45:00', NULL);
@@ -32,4 +32,6 @@ INSERT INTO produto (codigo, nome, preco) VALUES (11, 'Copo Térmico', 15.00);
 INSERT INTO produto (codigo, nome, preco) VALUES (12, 'Agenda', 8.00);
 
 
-INSERT INTO produto_pedido (id, pedido_id, produto_id) VALUES (3, 3, 3);
+INSERT INTO produto_pedido (id, pedido_id, produto_id) VALUES (1, 1, 3);
+INSERT INTO produto_pedido (id, pedido_id, produto_id) VALUES (2, 1, 4);
+INSERT INTO produto_pedido (id, pedido_id, produto_id) VALUES (3, 1, 5);
